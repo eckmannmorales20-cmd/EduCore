@@ -5,6 +5,8 @@ import './index.css';
 import { ThemeProvider } from './lib/ThemeContext';
 
 console.log('Main.tsx is executing');
+console.log('ENV:', import.meta.env);
+console.log('SUPABASE URL:', import.meta.env.VITE_SUPABASE_URL);
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
