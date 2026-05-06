@@ -36,12 +36,11 @@ export const Login = ({ onLogin }: LoginProps) => {
       console.log(`[Auth] Intentando inicio de sesión para: ${cleanEmail}`);
 
       // 1. Consulta a la tabla de perfiles para verificar credenciales
-      const { data: user, error: queryError } = await supabase
-        .from('profiles')
-        .select('*')
-        .ilike('email', cleanEmail)
-        .single();
-
+const { data: user, error: queryError } = await supabase
+  .from('profiles')
+  .select('*')
+  .eq('email', cleanEmail)
+  .single();
       if (queryError) {
         console.error("[Auth] Error al buscar perfil:", queryError.message);
         throw new Error('Credenciales inválidas. Verifica tu correo y contraseña.');
