@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Gestión Escolar - UTC</title>
+    <script type="module" crossorigin src="/assets/index-B-gI8jpu.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-pHRVxAfc.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      window.onerror = function(msg, url, line, col, error) {
+        var root = document.getElementById('root');
+        if (root && root.innerHTML === '') {
+          root.innerHTML = '<div style="padding: 20px; color: red; font-family: sans-serif;">' +
+            '<h1>Error Crítico</h1>' +
+            '<p>' + msg + '</p>' +
+            '<p>En: ' + url + ':' + line + ':' + col + '</p>' +
+            '</div>';
+        }
+        return false;
+      };
+    </script>
+  </body>
+</html>
+
