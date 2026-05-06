@@ -153,7 +153,7 @@ export default function App() {
           return matches.map(n => Number(n));
         };
 
-        const subjectGroups = groups.filter(g => {
+          subjectGroups = groups.filter(g => {
           const sId = String(selectedSubject.id);
           const gSubjectId = g.subject_id || g.subjectId;
           const isDirectLink = (gSubjectId && String(gSubjectId) === sId);
