@@ -11,3 +11,4 @@ export const supabase = isSupabaseConfigured
   ? createClient(supabaseUrl, supabaseAnonKey)
   : createClient('https://placeholder.supabase.co', 'placeholder');
 
+console.log(import.meta.env.VITE_SUPABASE_URL);
